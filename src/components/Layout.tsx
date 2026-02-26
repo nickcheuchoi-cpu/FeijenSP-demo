@@ -41,12 +41,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       >
         {/* Logo */}
         <div className="h-16 flex items-center gap-2.5 px-5 border-b border-sidebar-border shrink-0">
-          <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center">
-            <Factory className="w-4 h-4 text-primary-foreground" />
+          <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center">
+            <Factory className="w-4 h-4 text-white" />
           </div>
           <div>
-            <span className="text-base font-bold tracking-tight text-foreground">FeijenSP</span>
-            <span className="text-[10px] block text-muted-foreground -mt-0.5 tracking-widest uppercase">Beursplanning</span>
+            <span className="text-base font-bold tracking-tight text-white" style={{ fontFamily: 'Montserrat, Inter, sans-serif' }}>FeijenSP</span>
+            <span className="text-[10px] block text-white/60 -mt-0.5 tracking-widest uppercase">Beursplanning</span>
           </div>
         </div>
 
@@ -60,14 +60,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 to={item.path}
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 group ${
                   isActive
-                    ? "bg-primary/10 text-primary glow-primary"
-                    : "text-sidebar-foreground hover:text-foreground hover:bg-sidebar-accent"
+                    ? "bg-white/20 text-white shadow-sm"
+                    : "text-white/70 hover:text-white hover:bg-white/10"
                 }`}
               >
-                <item.icon className={`w-[18px] h-[18px] ${isActive ? "text-primary" : "text-sidebar-foreground group-hover:text-foreground"}`} />
+                <item.icon className={`w-[18px] h-[18px] ${isActive ? "text-white" : "text-white/60 group-hover:text-white"}`} />
                 <span>{item.label}</span>
                 {isActive && (
-                  <div className="ml-auto w-1.5 h-1.5 rounded-full gradient-primary" />
+                  <div className="ml-auto w-1.5 h-1.5 rounded-full bg-white" />
                 )}
               </NavLink>
             );
@@ -76,16 +76,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
         {/* Bottom */}
         <div className="p-4 border-t border-sidebar-border">
-          <div className="badge-engine text-[9px] w-fit">
-            <Factory className="w-2.5 h-2.5" /> Wij maken wat u bedenkt
-          </div>
+          <p className="text-[10px] text-white/50 uppercase tracking-widest font-medium">Wij maken wat u bedenkt</p>
         </div>
       </aside>
 
       {/* Main area */}
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Top bar */}
-        <header className="h-16 border-b border-border flex items-center justify-between px-6 shrink-0 bg-background/80 backdrop-blur-md">
+        <header className="h-16 border-b border-border flex items-center justify-between px-6 shrink-0 bg-card shadow-sm">
           <div className="flex items-center gap-4">
             <button
               onClick={() => setSidebarOpen(!sidebarOpen)}
