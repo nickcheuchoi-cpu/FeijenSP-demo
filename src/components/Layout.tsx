@@ -11,7 +11,7 @@ import {
   Settings,
   ChevronDown,
   Bell,
-  Zap,
+  Factory,
   Menu,
   X,
 } from "lucide-react";
@@ -42,11 +42,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {/* Logo */}
         <div className="h-16 flex items-center gap-2.5 px-5 border-b border-sidebar-border shrink-0">
           <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center">
-            <Zap className="w-4 h-4 text-primary-foreground" />
+            <Factory className="w-4 h-4 text-primary-foreground" />
           </div>
           <div>
-            <span className="text-base font-bold tracking-tight text-foreground">ExpoOS</span>
-            <span className="text-[10px] block text-muted-foreground -mt-0.5 tracking-widest uppercase">Operating System</span>
+            <span className="text-base font-bold tracking-tight text-foreground">FeijenSP</span>
+            <span className="text-[10px] block text-muted-foreground -mt-0.5 tracking-widest uppercase">Beursplanning</span>
           </div>
         </div>
 
@@ -77,7 +77,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {/* Bottom */}
         <div className="p-4 border-t border-sidebar-border">
           <div className="badge-engine text-[9px] w-fit">
-            <Zap className="w-2.5 h-2.5" /> Rule Engine Active
+            <Factory className="w-2.5 h-2.5" /> Wij maken wat u bedenkt
           </div>
         </div>
       </aside>
@@ -103,7 +103,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           <div className="flex items-center gap-4">
             <div className="badge-ai">
-              <Zap className="w-2.5 h-2.5" /> AI Active
+              <Factory className="w-2.5 h-2.5" /> AI Active
             </div>
             <button className="relative p-2 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-colors">
               <Bell className="w-4 h-4" />
