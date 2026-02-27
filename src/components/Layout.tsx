@@ -40,14 +40,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         } overflow-hidden shrink-0`}
       >
         {/* Logo */}
-        <div className="h-16 flex items-center gap-2.5 px-5 border-b border-sidebar-border shrink-0">
-          <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center">
-            <Factory className="w-4 h-4 text-white" />
-          </div>
-          <div>
-            <span className="text-base font-bold tracking-tight text-white" style={{ fontFamily: 'Montserrat, Inter, sans-serif' }}>FeijenSP</span>
-            <span className="text-[10px] block text-white/60 -mt-0.5 tracking-widest uppercase">Beursplanning</span>
-          </div>
+        <div className="h-16 flex items-center px-5 border-b border-sidebar-border shrink-0">
+          <img src="/feijensp-logo.svg" alt="FeijenSP" className="h-9 w-auto" />
         </div>
 
         {/* Nav */}
